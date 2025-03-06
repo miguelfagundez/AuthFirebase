@@ -1,3 +1,3 @@
 class AppStrings {
-  static const AppName = 'Auth Firebase';
+  static const appName = 'Auth Firebase';
 }
