@@ -1,8 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/scheduler.dart';
+import 'package:flutter_firebase_example/config/routes/route_names.dart';
 import 'package:flutter_firebase_example/features/shared/ui/presentation/widgets/button_long.dart';
 import 'package:flutter_firebase_example/features/shared/ui/presentation/widgets/button_square_with_image.dart';
 import 'package:flutter_firebase_example/features/shared/ui/presentation/widgets/custom_text_field.dart';
+import 'package:go_router/go_router.dart';
 
 class LoginPage extends StatefulWidget {
   const LoginPage({super.key});
@@ -66,6 +68,7 @@ class _LoginPageState extends State<LoginPage> {
                   if (emailController.text.isNotEmpty &&
                       passwordController.text.isNotEmpty) {
                     debugPrint('Todo correcto!');
+                    context.pushNamed(RouteNames.register);
                   } else {
                     debugPrint(
                       'Mensaje de error. Uno o ambos campos estan vacios!',
