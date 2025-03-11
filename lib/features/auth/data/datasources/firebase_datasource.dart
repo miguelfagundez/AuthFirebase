@@ -65,15 +65,18 @@ class AuthFirebaseDataSourceImpl implements FirebaseDataSource {
     String password,
   ) async {
     try {
+      debugPrint('AuthFirebaseDataSourceImpl - Begin');
       debugPrint(email);
       debugPrint(password);
       final credentials = await _firebaseAuth.signInWithEmailAndPassword(
         email: email,
         password: password,
       );
-      debugPrint(credentials.user?.uid);
+      debugPrint(credentials.toString());
+      debugPrint('AuthFirebaseDataSourceImpl - End');
 
       if (credentials.user?.uid != null) {
+        debugPrint('User can be authenticated!');
         final MyUser user = MyUser(
           id: credentials.user?.uid.toString() ?? '',
           name: email,
@@ -90,6 +93,7 @@ class AuthFirebaseDataSourceImpl implements FirebaseDataSource {
         ));
       }
     } catch (error) {
+      debugPrint('AuthFirebaseDataSourceImpl - Try - catch block');
       if (kDebugMode) {
         debugPrint(error.toString());
       }

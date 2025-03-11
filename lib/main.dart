@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_firebase_example/features/auth/presentation/bloc/auth_bloc.dart';
+import 'package:flutter_firebase_example/features/shared/ui/presentation/bloc/ui_bloc.dart';
 import 'package:get_it/get_it.dart';
 import 'firebase_options.dart';
 import 'package:flutter_firebase_example/config/di/di.dart';
@@ -27,7 +28,7 @@ class BlocWidget extends StatelessWidget {
     return MultiBlocProvider(
       providers: [
         BlocProvider(create: (_) => GetIt.instance.get<AuthBloc>()),
-        // BlocProvider(create: (_) => GetIt.instance.get<UiBloc>()),
+        BlocProvider(create: (_) => GetIt.instance.get<UiBloc>()),
       ],
       child: MyApp(),
     );
