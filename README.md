@@ -6,11 +6,9 @@ This beautiful login page design was made by [Mitch Koko](https://github.com/mit
 
 <p align = "left">
 <img src="/assets/images/screen.png" width="200">
-</p
+</p>
 
-## Getting Started
-
-### Firebase console
+## Firebase console
 
 **Step 1**  
 Go to firebase console and login. Create a new project.
