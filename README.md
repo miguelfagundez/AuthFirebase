@@ -2,6 +2,12 @@
 
 Example project connecting Firebase using Clean Architecture & BloC.
 
+This beautiful login page design was made by [Mitch Koko](https://github.com/mitchkoko). **Thank you!**
+
+<p align = "left">
+<img src="/assets/images/screen.png" width="200">
+</p
+
 ## Getting Started
 
 ### Firebase console
